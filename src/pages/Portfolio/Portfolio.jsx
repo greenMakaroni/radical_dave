@@ -1,8 +1,9 @@
-import React from 'react'
+//  navigation
+import Navigation from "../../components/navigation/Navigation"
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <Navigation />
   )
 }
 

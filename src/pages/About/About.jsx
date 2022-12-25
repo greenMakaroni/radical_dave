@@ -1,7 +1,9 @@
+//  navigation
+import Navigation from "../../components/navigation/Navigation"
 
 const About = () => {
   return (
-    <div>About</div>
+    <Navigation />
   )
 }
 
