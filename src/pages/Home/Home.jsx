@@ -1,9 +1,16 @@
 //  navigation
 import Navigation from "../../components/navigation/Navigation"
+import "./home.scss"
 
 const Home = () => {
   return (
-    <Navigation />
+    <>
+      <Navigation />
+      <div className="home-body">
+
+      </div>
+    </>
+
   )
 }
 

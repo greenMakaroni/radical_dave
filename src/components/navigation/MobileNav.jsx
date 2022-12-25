@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import profilePic from "../../assets/pp.jpg"
+import profilePic from "../../assets/radical_logo_transparent.png";
 import "./mobileNav.scss";
 
 const MobileNav = () => {
@@ -13,8 +13,7 @@ const MobileNav = () => {
       
    <nav className="navigation-menu" style={open ? { animation: "none" } : { animation: "menuAppear-Mobile ease 0.3s" }}>       
           <Link to="/" style={open ? {animation: "none"} : {animation: "linkFadeIn ease 1s;"}} className={location.pathname === "/" ? "link active" : "link"} onClick={() => setOpen(!open)} > Home </Link>
-          <Link to="/about" style={open ? {animation: "none"} : {animation: "linkFadeIn ease 1s;"}} className={location.pathname === "/about" ? "link active" : "link"} onClick={() => setOpen(!open)} > About </Link>
-          <Link to="/portfolio" style={open ? {animation: "none"} : {animation: "linkFadeIn ease 1s;"}} className={location.pathname === "/portfolio" ? "link active" : "link"} onClick={() => setOpen(!open)} > Portfolio </Link>
+          <Link to="/services" style={open ? {animation: "none"} : {animation: "linkFadeIn ease 1s;"}} className={location.pathname === "/services" ? "link active" : "link"} onClick={() => setOpen(!open)} > Services </Link>
           <Link to="/contact" style={open ? {animation: "none"} : {animation: "linkFadeIn ease 1s;"}} className={location.pathname === "/contact" ? "link active" : "link"} onClick={() => setOpen(!open)} > Contact </Link>
       </nav>
     )
@@ -32,16 +31,6 @@ const MobileNav = () => {
             <div className={ open ? "middle-close" : "hamburger-middle" }></div>
             <div className={ open ? "bottom-close" : "hamburger-bottom" }></div>
         </div>
-
-        { open && 
-        <div className="mobile-logo">
-          <img src={profilePic} className="mobile-pp" alt="Profile pictrue" onClick={() => navigate("/")} />
-          <div className="mobile-logoText">
-            <p className="mobile-name" onClick={() => { paragraphClickHandle()}}> Batuhan Ozgur Basal </p>
-            <p className="mobile-title"> Master of Science in Robotics & Intelligent Systems </p>
-          </div>
-        </div>
-        }
 
         { open && <NavigationMenu /> }
     </>
