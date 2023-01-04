@@ -1,3 +1,7 @@
 .home-body {
+    display: flex;
+    flex-direction: column;
     background-color: #3E3939;
+    width: 100vw;
+    height: 100vh;
 }
