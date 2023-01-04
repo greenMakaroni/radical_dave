@@ -1,4 +1,5 @@
 :root {
+  padding-top: 90px;
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -17,7 +18,6 @@
 
 body {
   margin: 0;
-  padding: 150px 0 0 0;
-  display: flex;
+  padding: 0;
 }
 

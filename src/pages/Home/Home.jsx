@@ -1,5 +1,6 @@
 //  navigation
 import Navigation from "../../components/navigation/Navigation"
+import Landing from "../../components/landingCanvas/Landing"
 import "./home.scss"
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
     <>
       <Navigation />
       <div className="home-body">
-
+        <Landing />
       </div>
     </>
 
