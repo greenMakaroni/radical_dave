@@ -1,20 +1,30 @@
 import React from 'react'
-import Box from "./Box"
 import { Canvas, useFrame } from '@react-three/fiber'
-import Portal from "./Portal"
-import { OrbitControls } from '@react-three/drei';
+// import Portal from "./Portal"
+import Spaceship from "./Spaceship"
+import { OrbitControls, Stars, GizmoHelper, GizmoViewport } from '@react-three/drei';
 
 const Landing = () => {
   return (
     <Canvas>
+       <color attach="background" args={ ["black"] } />
       
-       <ambientLight intensity={ 0.6 } />
-
         <pointLight
-          intensity={0.5}       
-          position={ [-25, 35, -12] } 
-        />           
-      <Portal />
+            intensity={1.5}       
+            position={ [ -5, 30, -5] } 
+         />  
+ 
+      {/* <Portal /> */}
+      <Spaceship />
+      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+      <GizmoHelper
+        alignment="bottom-right" // widget alignment within scene
+        margin={[80, 80]} // widget margins (X, Y)
+    
+      >
+        <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
+        {/* alternative: <GizmoViewcube /> */}
+      </GizmoHelper>
       <OrbitControls />
     </Canvas>
 
