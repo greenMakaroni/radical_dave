@@ -11,18 +11,18 @@ import { Camera } from 'three'
 export default function Spaceship() {
   const spaceship = useRef()
 
-  useFrame((state, delta) => {
-    if (spaceship.current.position.z < 20) {
-      spaceship.current.position.z += 0.5
-    } else {
-      spaceship.current.position.z = -400
-    }
-    state.camera.position.z = spaceship.current.position.z - 30
-  })
+  // useFrame((state, delta) => {
+  //   if (spaceship.current.position.z < 20) {
+  //     spaceship.current.position.z += 0.5
+  //   } else {
+  //     spaceship.current.position.z = -400
+  //   }
+  //   state.camera.position.z = spaceship.current.position.z - 30
+  // })
 
   const { nodes, materials } = useGLTF('./src/assets/radical_spaceship.glb')
   return (
-    <group ref={spaceship} dispose={null} position={[0, 0, -400]}>
+    <group ref={spaceship} dispose={null} position={[0, 0, -4]} scale={0.2}>
       <mesh geometry={nodes.cabine.geometry} material={materials.Material} position={[1.53, 0.24, 1.88]} rotation={[0.02, 0, 0]} scale={[0.77, 0.67, 1.31]} />
       <mesh geometry={nodes.bodyBottom.geometry} material={materials.Material} position={[1.62, 0.01, 0.84]} scale={[0.76, 0.86, 1.7]} />
       <mesh geometry={nodes.engine_left.geometry} material={materials.Material} position={[6.41, 0.01, -2.99]} scale={[0.53, 0.86, 1.66]} />
