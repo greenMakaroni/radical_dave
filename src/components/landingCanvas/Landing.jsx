@@ -1,16 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import Portal from "./Portal"
 import Spaceship from "./Spaceship"
 import { OrbitControls, Stars, GizmoHelper, GizmoViewport, GizmoViewcube } from '@react-three/drei';
-
-// ************  Theatre.js ****************
-
-
-// import { editable as e, SheetProvider } from "@theatre/r3f"
-
-
-
 
 // ****************** Postprocessing ************
 import {
@@ -20,18 +12,25 @@ import {
   Bloom
 } from "@react-three/postprocessing";
 
+// ****************** Theatre.js ************
 import { getProject } from '@theatre/core'
-const sheet = getProject('Space Portal').sheet('Space Portal');
+import craneShotAnimation from "./craneShot.json"
 
-import studio from "@theatre/studio"
-import extension from '@theatre/r3f/dist/extension'
+const sheet = getProject('Space Portal', { state: craneShotAnimation }).sheet('Space Portal');
 
-studio.initialize();
-studio.extend(extension);
+// import studio from "@theatre/studio"
+// import extension from '@theatre/r3f/dist/extension'
 
-import { editable, SheetProvider } from '@theatre/r3f'
+// studio.initialize();
+// studio.extend(extension);
+
+import { editable, SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 
 const Landing = () => {
+
+  useEffect(() => {
+    sheet.project.ready.then(() => sheet.sequence.play({ iterationCount: 1, range: [0, 12.3] }))
+  }, [])
 
   return (
     <Canvas>
@@ -39,22 +38,24 @@ const Landing = () => {
         {/* BG */}
         <color attach="background" args={["black"]} />
 
+        <PerspectiveCamera theatreKey="Camera" makeDefault position={[0, -100, 0]} lookAt={[0, 0, 0]} fov={75} />
+
         {/* Lights */}
         <editable.pointLight
           theatreKey='upperPointLight'
           color={"blue"}
-          intensity={0.1}
+          intensity={2}
           position={[-5, 90, -5]}
         />
         {/* <pointLight
           color={"lightblue"}
-          intensity={0.5}
+          intensity={2}
           position={[-5, -90, -5]}
         /> */}
 
         {/* Models */}
         <Portal />
-        <Spaceship />
+        {/* <Spaceship /> */}
         <Stars radius={250} depth={50} count={3000} factor={4} saturation={0} fade speed={3} />
 
 
@@ -62,13 +63,13 @@ const Landing = () => {
 
         <OrbitControls
           enablePan={false}
-          minDistance={5}
-          maxDistance={200}
+          minDistance={20}
+          maxDistance={70}
         />
 
         {/* Postprocessing */}
         <EffectComposer multisampling={0} disableNormalPass={true}>
-          <Noise opacity={0.06} />
+          <Noise opacity={0.05} />
           <Bloom
             luminanceThreshold={0.1}
             luminanceSmoothing={2}
@@ -76,6 +77,16 @@ const Landing = () => {
             opacity={3}
           />
         </EffectComposer>
+
+        {/* <GizmoHelper
+          alignment="center" // widget alignment within scene
+          margin={[80, 80]} // widget margins (X, Y)
+        >
+          <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
+
+        </GizmoHelper>
+        <gridHelper scale={10} /> */}
+
       </SheetProvider>
     </Canvas>
 
