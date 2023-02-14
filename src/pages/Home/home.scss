@@ -1,7 +1,16 @@
 .home-body {
     display: flex;
     flex-direction: column;
-    background-color: #3E3939;
     width: 100vw;
     height: 100vh;
+
+    .mainHeader {
+        position: absolute;
+        margin-top: 10vh;
+        margin-left: 5vw;
+        font-family: 'Oswald', sans-serif;
+        color: white;
+        font-size: 50px;
+        z-index: 2;
+    }
 }

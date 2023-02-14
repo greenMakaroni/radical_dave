@@ -1,0 +1,49 @@
+.progress {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(39, 238, 32);
+}
+
+.progress_transition {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(39, 238, 32);
+    animation: fadeOut ease-out 1s forwards;
+}
+
+.loader_bg {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #000000;
+    animation: loaderTransition ease-out 4s forwards;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+@keyframes loaderTransition {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
