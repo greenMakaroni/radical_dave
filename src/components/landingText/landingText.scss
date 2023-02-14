@@ -1,0 +1,42 @@
+.mainTextDiv {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    z-index: 3;
+
+    .mainHeader {
+        user-select: none;
+        margin: 0;
+        opacity: 0;
+        font-family: 'Oswald', sans-serif;
+        color: white;
+        font-size: 60px;
+        animation: text-in-smooth 1s ease-in-out;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+    }
+
+    .mainPar {
+        opacity: 0;
+        user-select: none;
+        font-family: 'Oswald', sans-serif;
+        color: #7BC74D;
+        font-size: 20px;
+        animation: text-in-smooth 1s ease-in-out;
+        animation-delay: 6s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes text-in-smooth {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
