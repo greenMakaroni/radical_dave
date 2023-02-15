@@ -2,6 +2,55 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
     background-color: #393E46;
+    align-items: center;
+
+    .about-header {
+        margin: 25vh 0 0 0;
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        font-family: 'Oswald', sans-serif;
+        align-self: center;
+        color: #ffffff;
+    }
+
+    .about {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .about-element {
+            margin: 0;
+            min-width: 35vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+
+            .about-pic {
+                height: 25vw;
+                width: 35vw;
+            }
+
+            .about-title {
+                font-size: 22px;
+                font-family: 'Oswald', sans-serif;
+                color: #7BC74D;
+            }
+
+            .element-par {
+                padding: 20px 50px 20px 50px;
+                max-width: 33vw;
+                color: #888888;
+            }
+        }
+
+    }
 }
