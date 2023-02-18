@@ -12,15 +12,15 @@ export default function Spaceship_1(props) {
   const spaceship_1 = useRef()
 
   useFrame((state, delta) => {
-    if (spaceship_1.current.position.z > 1) {
-      spaceship_1.current.position.z -= 0.03
+    if (spaceship_1.current.position.z > 0) {
+      spaceship_1.current.position.z -= 0.04
     } else {
-      spaceship_1.current.position.z = 100
+      spaceship_1.current.position.z = 75
     }
   })
 
   return (
-    <group ref={spaceship_1} {...props} dispose={null} position={[0, 0, 55]} scale={0.1} >
+    <group ref={spaceship_1} {...props} dispose={null} position={[0, 0, props.posZ]} scale={0.05} >
       <mesh geometry={nodes.body.geometry} material={materials.body} position={[-3.51, 1.61, -2.01]} />
       <mesh geometry={nodes.windows.geometry} material={materials.windows} position={[-3.51, 1.61, -2.01]} />
       <mesh geometry={nodes.thrusters.geometry} material={materials.thrust} position={[-3.51, 1.61, -2.01]} />

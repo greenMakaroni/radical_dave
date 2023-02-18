@@ -3,8 +3,7 @@ import { Canvas } from '@react-three/fiber'
 
 // models
 import Portal from "./Portal"
-import Spaceship_1 from './Spaceship_1';
-import Spaceship_2 from './Spaceship_2';
+import SpaceshipHighway from './SpaceshipHighway';
 
 import { OrbitControls, Stars, Html, useProgress } from '@react-three/drei';
 import Postprocessing from './Postprocessing';
@@ -61,10 +60,9 @@ const Landing = ({ isLoaded, setLoaded }) => {
 
             {/* Models */}
             <Portal />
-            {/* <Spaceship /> */}
+
             <Stars radius={250} depth={50} count={3000} factor={4} saturation={0} fade speed={3} />
-            <Spaceship_1 />
-            <Spaceship_2 />
+            <SpaceshipHighway />
 
             {/* Drei helpers */}
 
