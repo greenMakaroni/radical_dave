@@ -1,11 +1,9 @@
 import Spaceship_1 from './Spaceship_1';
 import Spaceship_2 from './Spaceship_2';
 
-const spaceships_start_z = [...Array(25).keys()].map(i => i + 1 + Math.floor(Math.random() * 50))
+const spaceships_start_z = [...Array(25).keys()].map(i => i + Math.floor(Math.random() * 50))
 const spaceships = [Spaceship_1, Spaceship_2]
-console.log(spaceships_start_z)
-console.log(Math.random() * 5)
-console.log(...Array(15).keys())
+
 const SpaceshipHighway = () => {
     return (
         spaceships_start_z.map((z) => {
