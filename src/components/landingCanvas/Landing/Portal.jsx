@@ -9,8 +9,8 @@ export default function Portal(props) {
   const { nodes, materials } = useGLTF('./src/assets/radical_portal.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.portal.geometry} material={materials.megastructure} rotation={[Math.PI / 2, 0, 0]} scale={5.49} />
-      <mesh geometry={nodes.Cube.geometry} material={materials.planeMaterial} scale={[4.56, 4.56, 0.3]} />
+      <mesh geometry={nodes.portal.geometry} material={materials.megastructure} rotation={[Math.PI / 2, 0, 0]} scale={7} />
+      <mesh geometry={nodes.Cube.geometry} material={materials.planeMaterial} scale={[6, 6, 0.5]} />
     </group>
   )
 }

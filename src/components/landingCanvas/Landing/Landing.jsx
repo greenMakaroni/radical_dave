@@ -59,20 +59,18 @@ const Landing = ({ isLoaded, setLoaded }) => {
             />
 
             {/* Models */}
-            <Portal />
-
             <Stars radius={250} depth={50} count={3000} factor={4} saturation={0} fade speed={3} />
+            <Portal />
             <SpaceshipHighway />
 
             {/* Drei helpers */}
-
             <OrbitControls
               enableZoom={false}
               enablePan={false}
-              minDistance={20}
+              minDistance={0}
               maxDistance={70}
             />
-
+            {/* Postprocessing */}
             <Postprocessing />
 
           </SheetProvider>
