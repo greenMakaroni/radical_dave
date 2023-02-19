@@ -10,7 +10,7 @@ export default function Portal(props) {
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.portal.geometry} material={materials.megastructure} rotation={[Math.PI / 2, 0, 0]} scale={7} />
-      <mesh geometry={nodes.Cube.geometry} material={materials.planeMaterial} scale={[6, 6, 0.5]} />
+      <mesh geometry={nodes.Cube.geometry} material={materials.planeMaterial} scale={[6, 6, 1]} />
     </group>
   )
 }
