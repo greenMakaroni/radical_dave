@@ -1,6 +1,44 @@
 .contact {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10vh 2vh 10vh 2vh;
     background-color: #7BC74D;
     width: 100vw;
     height: 100vh;
+
+    .text-in {
+        animation: text-in-smooth 1s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .contact-header {
+        margin: 0;
+        opacity: 0;
+        font-family: 'Ubuntu', sans-serif;
+        color: rgba(91, 97, 106, 1);
+        text-shadow: 3px 3px 5px rgb(0, 0, 0);
+        font-size: 10vw;
+
+    }
+
+    .contact-par {
+        margin: 0;
+        opacity: 0;
+        font-family: 'Ubuntu', sans-serif;
+        color: rgb(0, 0, 0);
+        font-size: 4vw;
+    }
+}
+
+@keyframes text-in-smooth {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
 }

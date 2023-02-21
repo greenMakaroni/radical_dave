@@ -20,7 +20,7 @@ const About = () => {
                     attribution="Photo by João Jesus: https://www.pexels.com/photo/selective-focus-photo-of-a-red-tulip-flower-2480072/"
                     paragraph="Eye catching design and flawless user experience is my standard. I can make your business stand out with simple 3D models and mesmerising animations."
                     title="The Value"
-                    reversed={width > 1300}
+                    reversed={width > 1050}
                 />
                 <AboutElement
                     src="./src/assets/pmk.jpg"
