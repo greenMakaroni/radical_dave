@@ -13,7 +13,7 @@ const AboutElement = ({ src, attribution, paragraph, title, reversed }) => {
             {
                 reversed ?
                     <>
-                        <div className={isVisible ? "about-element about-in" : "about-element"}>
+                        <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
                             <h1 className="about-title"> {title} </h1>
                             <p className="element-par"> {paragraph} </p>
                         </div>
@@ -26,7 +26,7 @@ const AboutElement = ({ src, attribution, paragraph, title, reversed }) => {
                         <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
                             <img src={src} alt="alt" className="about-pic" attribution={attribution} />
                         </div>
-                        <div className={isVisible ? "about-element about-in" : "about-element"}>
+                        <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
                             <h1 className="about-title"> {title} </h1>
                             <p className="element-par"> {paragraph} </p>
                         </div>

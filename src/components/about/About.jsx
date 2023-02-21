@@ -9,24 +9,24 @@ const About = () => {
         <div className="aboutSection">
             <div className="about">
                 <AboutElement
-                    src="./src/assets/pas.jpg"
-                    attribution="Photo by Alexander Suhorucov"
-                    paragraph="My mission is to bring your business to the online world, your customer is already there looking for you!"
-                    title="THE MISSION"
+                    src="./src/assets/pac.jpg"
+                    attribution="Photo by Andrea Piacquadio: https://www.pexels.com/photo/photo-of-man-wearing-brown-coat-842539/"
+                    paragraph="I focus on helping small businesses and freelancers to establish online presence by building stunning websites."
+                    title="The Mission"
                     reversed={false}
                 />
                 <AboutElement
                     src="./src/assets/pjj.jpg"
                     attribution="Photo by João Jesus: https://www.pexels.com/photo/selective-focus-photo-of-a-red-tulip-flower-2480072/"
-                    paragraph="By adhering to UX/UI design principles I make websites user friendly and pleasant to look at. I also specialize in embedding 3D into websites, creating stunning animated scenes. Small business or not, I can make it stand out."
-                    title="THE VALUE"
+                    paragraph="Eye catching design and flawless user experience is my standard. I can make your business stand out with simple 3D models and mesmerising animations."
+                    title="The Value"
                     reversed={width > 1300}
                 />
                 <AboutElement
                     src="./src/assets/pmk.jpg"
                     attribution=""
-                    paragraph="My mission is to bring your business to the online world, your customer is already there looking for you!"
-                    title="THE SERVICE"
+                    paragraph="I'll answer any question you may have and prepare you for the future of maintaining the website, I can also take that responsibility upon myself to save you time and headache."
+                    title="The Service"
                     reversed={false}
                 />
             </div>
