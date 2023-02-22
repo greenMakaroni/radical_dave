@@ -5,6 +5,7 @@ import LandingText from "../../components/landingText/LandingText"
 import About from "../../components/about/About"
 import Contact from "../../components/contact/Contact"
 import Footer from "../../components/footer/Footer"
+import ScrollButton from "../../components/landingCanvas/Landing/ScrollButton"
 
 import "./home.scss"
 
@@ -17,8 +18,9 @@ const Home = () => {
 
   return (
     <div className="home-body">
-      {/* <LandingText />
-      <Landing isLoaded={isLoaded} setLoaded={setLoaded} /> */}
+      <LandingText />
+      <Landing isLoaded={isLoaded} setLoaded={setLoaded} />
+      <ScrollButton />
       <About />
       <Contact />
       <Footer />

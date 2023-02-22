@@ -7,7 +7,7 @@ const About = () => {
 
     return (
         <div className="aboutSection">
-            <div className="about">
+            <div id="about">
                 <AboutElement
                     src="./src/assets/pac.jpg"
                     attribution="Photo by Andrea Piacquadio: https://www.pexels.com/photo/photo-of-man-wearing-brown-coat-842539/"

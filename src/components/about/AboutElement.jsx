@@ -15,28 +15,23 @@ const AboutElement = ({ src, attribution, paragraph, title, reversed }) => {
                 reversed ?
                     <>
                         <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
-                            <h1 className="about-title"> {title} </h1>
-                            <p className="element-par"> {paragraph} </p>
+                            <h1 className={width < 768 ? " about-title-mobile" : "about-title"}> {title} </h1>
+                            <p className={width < 768 ? "element-par-mobile" : "element-par"}> {paragraph} </p>
                         </div>
-                        {
-                            width > 1000 &&
-                            <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
-                                <img src={src} alt="alt" className="about-pic" attribution={attribution} />
-                            </div>
-                        }
 
+                        <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
+                            <img src={src} alt="alt" className={width < 768 ? "about-pic-mobile" : "about-pic"} attribution={attribution} />
+                        </div>
                     </>
                     :
                     <>
-                        {
-                            width > 1000 &&
-                            <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
-                                <img src={src} alt="alt" className="about-pic" attribution={attribution} />
-                            </div>
-                        }
                         <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
-                            <h1 className="about-title"> {title} </h1>
-                            <p className="element-par"> {paragraph} </p>
+                            <img src={src} alt="alt" className={width < 768 ? "about-pic-mobile" : "about-pic"} attribution={attribution} />
+                        </div>
+
+                        <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
+                            <h1 className={width < 768 ? " about-title-mobile" : "about-title"}> {title} </h1>
+                            <p className={width < 768 ? "element-par-mobile" : "element-par"}> {paragraph} </p>
                         </div>
                     </>
             }

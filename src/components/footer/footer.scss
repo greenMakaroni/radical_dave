@@ -1,7 +1,36 @@
 .footer {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     width: 100vw;
     height: 20vh;
+
+    .linkedIn-link {
+        display: inline-block;
+        position: relative;
+        color: #ffffff;
+        font-size: 5vw;
+        font-family: 'Ubuntu', sans-serif;
+        text-decoration: none;
+    }
+
+    .linkedIn-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: center;
+        transition: transform 0.25s ease-out;
+    }
+
+    .linkedIn-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: center;
+    }
 }
