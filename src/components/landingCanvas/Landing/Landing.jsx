@@ -1,4 +1,4 @@
-import { useEffect, Suspense, } from 'react'
+import { useState, useEffect, Suspense, } from 'react'
 import { Canvas } from '@react-three/fiber'
 
 // models
@@ -26,7 +26,8 @@ const LoadingTransition = () => {
 
 const sheet = getProject('Space Portal', { state: craneShotAnimation }).sheet('Space Portal');
 
-const Landing = ({ isLoaded, setLoaded }) => {
+const Landing = () => {
+  const [isLoaded, setLoaded] = useState(false);
 
   function Loader() {
     const { progress } = useProgress();

@@ -29,7 +29,7 @@ const About = () => {
                 <AboutElement
                     src={pmkUrl}
                     attribution=""
-                    paragraph="I'll answer any question you may have and prepare you for the future of maintaining the website, I can also take that responsibility upon myself to save you time and headache."
+                    paragraph="I'll answer any question you may have and prepare you for the future of website maintenance, I can also take that responsibility upon myself to save you time and headache."
                     title="The Service"
                     reversed={false}
                 />
