@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 
-import Landing from "../../components/landingCanvas/Landing/Landing"
+import Landing from "../../components/landingCanvas/Landing"
 import LandingText from "../../components/landingText/LandingText"
 import About from "../../components/about/About"
 import Contact from "../../components/contact/Contact"
 import Footer from "../../components/footer/Footer"
-import ScrollButton from "../../components/landingCanvas/Landing/ScrollButton"
+import ScrollButton from "../../components/scrollButton/ScrollButton"
 
 import "./home.scss"
 
