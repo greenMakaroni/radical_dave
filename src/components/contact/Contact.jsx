@@ -16,7 +16,7 @@ const Contact = () => {
                 get in touch
             </h1>
             <h3 ref={header} className={isVisible ? "contact-par text-in" : "contact-par"}>
-                radical.dave.software@gmail.com
+                <span class="mask">radical.dave.software@gmail.com</span> 
             </h3>
         </div>
     )
