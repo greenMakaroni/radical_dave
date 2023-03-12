@@ -11,13 +11,13 @@ const SpaceshipHighway = () => {
             {
                 spaceships_start_z.map((z) => {
                     const random = Math.floor(Math.random() * spaceships.length);
-                    return spaceships[random]({ posX: 2, posZ: z, direction: "in" })
+                    return spaceships[random]({ key: z, posX: 2, posZ: z, direction: "in" })
                 })
             }
             {
                 spaceships_start_z.map((z) => {
                     const random = Math.floor(Math.random() * spaceships.length);
-                    return spaceships[random]({ posX: -2, posZ: z, direction: "out" })
+                    return spaceships[random]({ key: z, posX: -2, posZ: z, direction: "out" })
                 })
             }
         </>
