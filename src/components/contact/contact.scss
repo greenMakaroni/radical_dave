@@ -20,12 +20,16 @@
         opacity: 0;
         font-family: 'Oswald', sans-serif;
         color: rgb(255, 255, 255);
-        text-shadow: 3px 3px 5px rgb(0, 0, 0);
         font-size: 10vw;
     }
 
     h3 > .mask {
-        animation: background-gradient-movement 4s linear infinite;
+        display: inline-block;
+        position: relative;
+    }
+
+    h3 > .mask {
+        animation: background-gradient-movement 4s linear infinite forwards;
         background: radial-gradient(circle, 
         rgb(180, 245, 0) 0%, 
         rgb(15, 100, 7) 100%
