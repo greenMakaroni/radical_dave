@@ -1,4 +1,5 @@
-import { useState, useEffect, Suspense, } from 'react'
+import { useState, useEffect, Suspense, useRef } from 'react'
+import useOnScreen from "../../useOnScreen"
 import { Canvas } from '@react-three/fiber'
 // models ************************************  
 import Portal from "./3Dmodels/portal/Portal"
@@ -22,12 +23,15 @@ const sheet = getProject('Space Portal', { state: craneShotAnimation }).sheet('S
 const Landing = () => {
   const [isLoaded, setLoaded] = useState(false);
 
+  const expensive = useRef()
+  const isVisible = useOnScreen(expensive)
+
   useEffect(() => {
     sheet.project.ready.then(() => sheet.sequence.play({ iterationCount: 1, range: [0, 12.3] }))
   }, [])
 
   return (
-    <div className="canvas">
+    <div className="canvas" ref={expensive}>
       {isLoaded && <LoadingTransition />}
       <Canvas>
         <Suspense fallback={<Loader setLoaded={setLoaded} />}>
@@ -45,10 +49,13 @@ const Landing = () => {
             />
 
             {/* Models */}
-            <Stars radius={400} depth={50} count={2000} factor={7} saturation={0} fade speed={1} />
-            <Portal />
-            <SpaceshipHighway />
-
+            { isVisible && 
+            <>
+              <Stars radius={400} depth={50} count={2000} factor={7} saturation={0} fade speed={1} />
+                <Portal />
+              <SpaceshipHighway />
+            </>
+            }
             {/* Drei helpers */}
             <OrbitControls
               enableZoom={false}
