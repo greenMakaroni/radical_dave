@@ -4,7 +4,7 @@ import useWindowDimensions from "../../useWindowDimensions"
 import "./contact.scss"
 
 const Contact = () => {
-    const { height, width } = useWindowDimensions()
+    const { width } = useWindowDimensions()
 
     const header = useRef()
     const isVisible = useOnScreen(header)

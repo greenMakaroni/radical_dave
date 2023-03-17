@@ -52,7 +52,7 @@ const Landing = () => {
             { isVisible && 
             <>
               <Stars radius={400} depth={50} count={2000} factor={7} saturation={0} fade speed={1} />
-                <Portal />
+              <Portal />
               <SpaceshipHighway />
             </>
             }

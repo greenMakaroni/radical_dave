@@ -7,7 +7,7 @@ import pmkUrl from "./pmk.jpg"
 import "./about.scss"
 
 const About = () => {
-    const { height, width } = useWindowDimensions()
+    const { width } = useWindowDimensions()
 
     return (
         <div className="aboutSection">

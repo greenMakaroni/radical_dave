@@ -5,7 +5,7 @@ import useWindowDimensions from "../../useWindowDimensions"
 import "./about.scss"
 
 const AboutElement = ({ src, attribution, paragraph, title, reversed }) => {
-    const { height, width } = useWindowDimensions()
+    const { width } = useWindowDimensions()
     const el = useRef()
     const isVisible = useOnScreen(el)
 
@@ -20,7 +20,7 @@ const AboutElement = ({ src, attribution, paragraph, title, reversed }) => {
                         </div>
 
                         <div ref={el} className={isVisible ? "about-element about-in" : "about-element"}>
-                            <img src={src} alt="alt" className={width < 768 ? "about-pic-mobile" : "about-pic"} attribution={attribution} />
+                            <img src={src} alt="alt" className={width < 768 ? "about-pic-mobile" : "about-pic rotate-opposite"} attribution={attribution} />
                         </div>
                     </>
                     :

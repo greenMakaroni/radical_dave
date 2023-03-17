@@ -7,7 +7,7 @@ import {
 const Postprocessing = () => {
     return (
         <EffectComposer multisampling={0} disableNormalPass={true}>
-            <Noise opacity={0.05} />
+            <Noise opacity={0.02} />
             <Bloom
                 luminanceThreshold={0.1}
                 luminanceSmoothing={2}

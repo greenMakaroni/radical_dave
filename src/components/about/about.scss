@@ -44,8 +44,13 @@
 
             .about-pic {
                 margin: 20vh 0 20vh 0;
-                width: 45vw;
+                width: 40vw;
                 box-shadow: 10px 10px 35px rgb(0, 0, 0);
+                transform: rotate(4deg);
+            }
+
+            .rotate-opposite {
+                transform: rotate(-4deg);
             }
 
             .about-pic-mobile {
